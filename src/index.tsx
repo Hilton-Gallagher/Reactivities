@@ -5,6 +5,8 @@ import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css'
 import { StoreContext, store } from './app/stores/store';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './app/router/Router';
 
 
 const root = ReactDOM.createRoot(
@@ -12,7 +14,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StoreContext.Provider value={store}>
-    <App />
+    <RouterProvider router={router}/>
   </StoreContext.Provider>
     
 );
